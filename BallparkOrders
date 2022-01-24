@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	String order = input.nextLine();
+	String[] orderWords = order.split(" ");
+	float price = 0;
+	for (String s: orderWords)
+    {
+        switch (s)
+        {
+            case "Nachos":
+                price += 6;
+                break;
+            case "Pizza":
+                price += 6;
+                break;
+            case "Cheeseburger":
+                price += 10;
+                break;
+            case "Water":
+                price += 4;
+                break;
+            default:
+                price += 5;
+        }
+    }
+	price *= 1.07;
+        System.out.println(price);
+    }
+}
