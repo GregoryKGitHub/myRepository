@@ -1,0 +1,21 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        boolean valid = true;
+        int code = 0;
+        try {
+            code = input.nextInt();
+        }
+        catch (InputMismatchException m) {
+            valid = false;
+        }
+        if (Integer.toString(code).length() != 5) {
+            valid = false;
+        }
+        System.out.println(valid);
+    }
+}
