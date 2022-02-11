@@ -1,0 +1,25 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+
+    static double getTotalCost(int order, int cost, double tax, double discount)    {
+        if (order == 1) {
+            return cost * (1 + tax);
+        }
+        else    {
+            return cost * order * (1 + tax) * (1 - discount);
+        }
+    }
+
+    public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        double discount = 0.1;
+        double tax = 0.07;
+        int cost = 5;
+        int order = input.nextInt();
+        double totalCost = getTotalCost(order, cost, tax, discount);
+        System.out.println(decimalFormat.format(totalCost));
+    }
+}
