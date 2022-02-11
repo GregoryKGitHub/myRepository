@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static int getTotalTime(int timeToTravel, int totalPeople, int peopleOnBoard)   {
+        return timeToTravel + totalPeople / peopleOnBoard * timeToTravel * 2;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int totalPeople = input.nextInt();
+        int peopleOnBoard = 20;
+        int timeToTravel = 10;
+        int totalTime = 0;
+        totalTime = getTotalTime(timeToTravel, totalPeople, peopleOnBoard);
+        System.out.println(totalTime);
+    }
+}
