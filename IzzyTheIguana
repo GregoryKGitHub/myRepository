@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	int snackCost = 0;
+	int goalSnackCost = 10;
+        Scanner input = new Scanner(System.in);
+        String snacks = input.nextLine();
+        ArrayList<String> snacksArr = new ArrayList<String>(Arrays.asList(snacks.split(" ")));
+        for (String s:
+             snacksArr) {
+            switch (s)  {
+                case "Lettuce":
+                    snackCost += 5;
+                    break;
+                case "Carrot":
+                    snackCost += 4;
+                    break;
+                case "Mango":
+                    snackCost += 9;
+            }
+        }
+        if (snackCost < goalSnackCost)  {
+            System.out.println("Time to wait");
+        }
+        else    {
+            System.out.println("Come on Down!");
+        }
+    }
+}
