@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int initialAge = input.nextInt();
+        int timeElapsed = input.nextInt();
+        System.out.println("My twin is " + Integer.sum(initialAge, timeElapsed) + " years old and they are " + timeElapsed + " years older than me");
+    }
+}
