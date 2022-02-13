@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+    static int getTickets(int points, int ticketCost)   {
+        return points / ticketCost;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int points = input.nextInt();
+        int gunCost = input.nextInt();
+        int ticketCost = 12;
+        int tickets = getTickets(points, ticketCost);
+        if (tickets < gunCost)  {
+            System.out.println("Try again");
+        }
+        else    {
+            System.out.println("Buy it!");
+        }
+    }
+}
