@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int criminals = input.nextInt();
+        int yellowAlert = 5;
+        int redAlert = 10;
+        if (criminals < yellowAlert)    {
+            System.out.println("I got this!");
+        }
+        else if (criminals >= yellowAlert && criminals < redAlert)  {
+            System.out.println("Help me Batman");
+        }
+        else    {
+            System.out.println("Good Luck out there!");
+        }
+    }
+}
