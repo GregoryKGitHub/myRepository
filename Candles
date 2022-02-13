@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        final int candlesNeed = 9;
+        int friends = input.nextInt();
+        int totalCandles = getTotalCandles(friends, candlesNeed);
+        System.out.println(totalCandles);
+    }
+
+    private static int getTotalCandles(int friends, int candlesNeed) {
+        return ++friends * candlesNeed;
+    }
+}
