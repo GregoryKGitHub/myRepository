@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        final int startCost = 40;
+        final int colorCost = 5;
+        int numberOfColors = input.nextInt();
+        double tax = 0.1;
+        double totalCost = getTotalCost(startCost, colorCost, numberOfColors, tax);
+        System.out.println(Math.round(totalCost));
+    }
+
+    private static double getTotalCost(int startCost, int colorCost, int numberOfColors, double tax) {
+        return (startCost + colorCost * numberOfColors) * (1 + tax);
+    }
+}
