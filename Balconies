@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String apartmentA = input.nextLine();
+        String apartmentB = input.nextLine();
+        String[] apartmentAArray = apartmentA.split(",");
+        String[] apartmentBArray = apartmentB.split(",");
+        int areaA = getApartmentArea(apartmentAArray);
+        int areaB = getApartmentArea(apartmentBArray);
+        if (areaA > areaB)  {
+            System.out.println("Apartment A");
+        }
+        else    {
+            System.out.println("Apartment B");
+        }
+    }
+
+    private static int getApartmentArea(String[] apartmentArray) {
+        return Integer.parseInt(apartmentArray[0]) * Integer.parseInt(apartmentArray[1]);
+    }
+}
