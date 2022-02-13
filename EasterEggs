@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int hiddenEggs = input.nextInt();
+        int myBasket = input.nextInt();
+        int myFriendBasket = input.nextInt();
+        int totalAmount = Integer.sum(myBasket, myFriendBasket);
+        if (totalAmount < hiddenEggs)   {
+            System.out.println("Keep Hunting");
+        }
+        else    {
+            System.out.println("Candy Time");
+        }
+    }
+}
