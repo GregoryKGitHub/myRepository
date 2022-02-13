@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int cost = 2000000;
+        int insurance = 1000000;
+        int price = 3000000;
+        int productivity = 10;
+        int sales = input.nextInt();
+        int profit = Math.multiplyExact(sales, price);
+        int loss = Integer.sum(Math.multiplyExact(cost, productivity), insurance);
+        if (profit > loss)  {
+            System.out.println("Profit");
+        }
+        else if (profit < loss) {
+            System.out.println("Loss");
+        }
+        else    {
+            System.out.println("Broke Even");
+        }
+    }
+}
