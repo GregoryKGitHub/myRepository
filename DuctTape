@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int doorHeight = input.nextInt();
+        int doorWidth = input.nextInt();
+        int sidesOfDoor = 2;
+        int tapeLength = 60;
+        int tapeWidth = 2;        //inches
+        tapeLength = toInches(tapeLength);
+        doorHeight = toInches(doorHeight);
+        doorWidth = toInches(doorWidth);
+        int doorArea = getArea(doorHeight, doorWidth);
+        int tapeArea = getArea(tapeLength, tapeWidth);
+        int tapeAmount = getTapeAmount(doorArea, tapeArea, sidesOfDoor);
+        if (doorArea % tapeArea != 0) {
+            tapeAmount++;
+        }
+        System.out.println(tapeAmount);
+    }
+
+    private static int getTapeAmount(int doorArea, int tapeArea, int sidesOfDoor) {
+        return sidesOfDoor * doorArea / tapeArea;
+    }
+
+    private static int toInches(int length) {
+        int inchesInFoot = 12;
+        return length * inchesInFoot;
+    }
+
+    private static int getArea(int height, int width) {
+        return height * width;
+    }
+}
