@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int length = input.nextInt();
+        int width = input.nextInt();
+        int gap = 2;
+        int perimeter = getPerimeter(length, width);
+        int flamingo = getFlamingo(perimeter, gap);
+        System.out.println(flamingo);
+    }
+
+    private static int getFlamingo(int perimeter, int gap) {
+        return perimeter / gap;
+    }
+
+    private static int getPerimeter(int length, int width) {
+        return 2 * Integer.sum(length, width);
+    }
+}
