@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int priceInPesos = input.nextInt();
+        int priceInDollars = input.nextInt();
+        int exchangeRate = 50;
+        int pesosInDollars = getPesosInDollars(priceInDollars, exchangeRate);
+        if (pesosInDollars < priceInPesos)  {
+            System.out.println("Dollars");
+        }
+        else    {
+            System.out.println("Pesos");
+        }
+    }
+
+    private static int getPesosInDollars(int dollars, int exchangeRate) {
+        return dollars * exchangeRate;
+    }
+}
